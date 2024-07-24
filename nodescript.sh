@@ -178,7 +178,7 @@ make cel-key
 celestia version && sleep 3
 celestia light init --core.ip rpc.celestia.pops.one --p2p.network celestia
 
-echo -e '\e[36mBu adımda cüzdanınızla ilgili bilgiler paylaşılır.. >>>LÜTFEN ANLATICI KELİMELERİ YEDEKLEYİN.<<< Yedekleme yaptıktan sonra Enter tuşuna basarak devam edebilirsiniz.\e[39m'
+echo -e "\e[36mBu adımda cüzdanınızla ilgili bilgiler paylaşılır.. >>>LÜTFEN ANLATICI KELİMELERİ YEDEKLEYİN.<<< Yedekleme yaptıktan sonra Enter tuşuna basarak devam edebilirsiniz.\e[39m"
 read Enter
 
 sudo tee <<EOF >/dev/null /etc/systemd/system/celestia-lightd.service
