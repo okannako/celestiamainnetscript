@@ -142,7 +142,7 @@ celestia-appd tx staking create-validator \
 --gas=auto \
 --gas-prices=0.01utia
 
-echo -e '\e[36mÖNEMLİ: Doğrulayıcı oluşturma adımı tamamlandıktan sonra .celestia-appd klasöründeki config klasörünü yedeklediğinizden emin olun..\e[39m'
+echo -e "\e[36mÖNEMLİ: Doğrulayıcı oluşturma adımı tamamlandıktan sonra .celestia-appd klasöründeki config klasörünü yedeklediğinizden emin olun..\e[39m"
 sleep 10
 
 break
@@ -269,7 +269,7 @@ EOF
 sudo systemctl enable celestia-bridge
 sudo systemctl start celestia-bridge
 
-echo -e '\e[36mÖNEMLİ: /root/.celestia-bridge-mocha anahtarlar altındaki klasörün yedeklenmesi gerekir.\e[39m'
+echo -e "\e[36mÖNEMLİ: /root/.celestia-bridge-mocha anahtarlar altındaki klasörün yedeklenmesi gerekir.\e[39m"
 sleep 7
 
 sudo journalctl -u celestia-bridge.service -f
@@ -308,7 +308,7 @@ celestia version && sleep 3
 
 celestia full init --core.ip rpc.celestia.pops.one 
 
-echo -e '\e[36mBu adımda cüzdanınızla ilgili bilgiler paylaşılır.. >>>LÜTFEN ANLATICI KELİMELERİ YEDEKLEYİN.<<< Yedekleme yaptıktan sonra Enter tuşuna basarak devam edebilirsiniz.\e[39m'
+echo -e "\e[36mBu adımda cüzdanınızla ilgili bilgiler paylaşılır.. >>>LÜTFEN ANLATICI KELİMELERİ YEDEKLEYİN.<<< Yedekleme yaptıktan sonra Enter tuşuna basarak devam edebilirsiniz.\e[39m"
 read Enter
 
 sudo tee <<EOF >/dev/null /etc/systemd/system/celestia-fulld.service
@@ -331,7 +331,7 @@ systemctl enable celestia-fulld
 systemctl start celestia-fulld
 
 
-echo -e '\e[36mIMPORTANT: /root/.celestia-full-mocha-4 anahtarlar altındaki klasörün yedeklenmesi gerekir.\e[39m'
+echo -e "\e[36mIMPORTANT: /root/.celestia-full-mocha-4 anahtarlar altındaki klasörün yedeklenmesi gerekir.\e[39m"
 sleep 7
 
 journalctl -u celestia-fulld.service -f
