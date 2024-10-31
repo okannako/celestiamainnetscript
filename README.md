@@ -6,4 +6,19 @@ Celestia Mainnet Beta ağında aşağıdaki kodu çalıştırarak Mainnet Beta a
 curl -s https://raw.githubusercontent.com/okannako/celestiamainnetscript/main/nodescript.sh > nodescript.sh && chmod +x nodescript.sh && ./nodescript.sh
 ```
 
+### bbr Aktif Hale Getirmek (Mutlaka Yapın)
+- Aşağıdaki kodları girerek basit bir şekilde aktifleştirebilirsiniz.
+```
+cd celestia-app
+make enable-bbr
+```
+
+- Eğer yukarıdaki kodlarda hata alırsanız aşağıdaki kodla aktif hale getirebilirsiniz.
+```
+sudo modprobe tcp_bbr; \
+        echo "net.core.default_qdisc=fq" | sudo tee -a /etc/sysctl.conf; \
+        echo "net.ipv4.tcp_congestion_control=bbr" | sudo tee -a /etc/sysctl.conf; \
+        sudo sysctl -p; \
+```
+
 Kurulumn sırasında veya sonrasında bir şey sormak isterseniz bana Telegram, Mail ve Discord yoluyla ulaşabirsiniz.
